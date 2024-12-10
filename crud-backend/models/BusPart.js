@@ -9,7 +9,7 @@ const BusPartsSchema = mongoose.Schema({
     img: String,
     cost: Number,
     link: String,
-    hasBought: Boolean,
+    hasBought: {type: Boolean, default: false},
 
 });
 

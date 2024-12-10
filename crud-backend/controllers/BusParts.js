@@ -42,9 +42,9 @@ router.get('/:partId', async (req, res) => {
       }
    }
 })
-
-//UPDATE - put - /BusParts.js
-router.put('/:partId', async (req, res) => {
+//put and patch - can use the same code
+//UPDATE - patch - /BusParts.js  // maybe i can use this same code to the patch?
+router.patch('/:partId', async (req, res) => {
    try {
       const updatePart = await BusPart.findByIdAndUpdate(
          req.params.partId,
@@ -66,7 +66,7 @@ router.put('/:partId', async (req, res) => {
 })
 
 
-// DELETE - DELETE - /BusParts.js
+// DELETE - delete - /BusParts.js
 router.delete('/:partId', async (req, res) => {
    try {
       const deletePart = await BusPart.findByIdAndDelete(req.params.partId)
