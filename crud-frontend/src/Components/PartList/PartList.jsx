@@ -7,7 +7,7 @@ const PartList = ({ parts, setParts }) => {
     useEffect(() => {
         const fetchParts = async () => {
             try {
-                let res = await fetch(`${process.env.REACT_APP_API_URL}/BusParts`); // matches the route defined in express
+                let res = await fetch(`${import.meta.env.VITE_API_URL}/BusParts`); // matches the route defined in express
                 let JSONdata = await res.json()
                 console.log(JSONdata);
                 setParts(JSONdata)
@@ -24,7 +24,8 @@ const PartList = ({ parts, setParts }) => {
             {parts.length ? (
                 parts.map((part, idx) => (
                     <div className="card_container" key={idx}>
-                        <h3>{part.name}</h3>
+                        <img src={part.img} alt={part.name} />
+                        <h3>{part.itemName}</h3>
                         <h5>{part.brand}</h5>
                         <p>Cost: ${part.cost}</p>
                         <p>
@@ -33,7 +34,8 @@ const PartList = ({ parts, setParts }) => {
                             type='checkbox'  
                             checked={part.hasBought === 'true'}
                             />
-                            </p>
+                        </p>
+                        <a href={part.link}>Purchase</a>
             
                     </div>
                 ))

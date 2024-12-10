@@ -19,13 +19,11 @@ mongoose.connection.on('connected', () => {
 })
 
 //middleware
-
-
-app.use(cors({origin: 'http://localhost: 5173'}))
-
+app.use(cors({ origin: 'http://localhost:5173'}))
 app.use(express.json())
 
 //add the router to the BusParts route
+//'/BusParts is my api path
 app.use('/BusParts', BusPartRouter)
 
 app.listen(3000, () => {

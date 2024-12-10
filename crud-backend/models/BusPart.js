@@ -6,7 +6,7 @@ const BusPartsSchema = mongoose.Schema({
 
     itemName: String,
     brand: String,
-    imgs: String,
+    img: String,
     cost: Number,
     link: String,
     hasBought: Boolean,
