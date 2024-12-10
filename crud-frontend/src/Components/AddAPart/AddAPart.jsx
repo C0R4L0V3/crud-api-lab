@@ -2,7 +2,8 @@ const AddAPart = (props) => {
 
     return (
         <form>
-            placeholder, form insert here
+            <label></label>
+            <input></input>
         </form>
     )
 
