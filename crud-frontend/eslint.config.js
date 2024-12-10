@@ -33,6 +33,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off', //prevents warnings if you’re not declaring types for your props
+      'react/no-unescaped-entities': 'off'//prevents warnings if you’re using contractions withi
     },
   },
 ]
