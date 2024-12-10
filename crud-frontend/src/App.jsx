@@ -8,6 +8,7 @@ import Home from './Components/Home/Home.jsx'
 import AddAPart from './Components/AddAPart/AddAPart.jsx'
 import PartList from './Components/PartList/PartList.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import PartIndex from './Components/PartIndex/PartIndex.jsx'
 
 function App() {
 
@@ -44,6 +45,7 @@ const handleNav = (e) => {
         {page === 'Home' ? <Home /> : ''}
         {page === 'AddPart' ? <AddAPart /> : ''}
         {page === 'PartList' ? <PartList  setParts={setParts} parts={parts}/> : ''}
+        {page === 'PartIndex' ? <PartIndex  setParts={setParts} parts={parts}/> : ''}
       <Footer />
       
     </>
