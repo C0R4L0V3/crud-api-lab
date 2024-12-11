@@ -32,7 +32,7 @@ const PartIndex = ({ parts, setParts }) => {
                             Bought
                             <input 
                             type='checkbox'  
-                            checked={part.hasBought === 'true'}
+                            checked={part.hasBought}
                             />
                         </p>
                         <a href={part.link}>Purchase</a>
